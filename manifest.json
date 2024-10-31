@@ -1,0 +1,23 @@
+{
+  "name": "Custom Cursor Extension",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "service-worker.js"
+  },
+  "action": {},
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["https://developer.chrome.com/*"],
+      "css": ["style.css"],
+      "js": ["counter.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["dino.png"],
+      "matches": ["https://developer.chrome.com/*"]
+    }
+  ]
+}
